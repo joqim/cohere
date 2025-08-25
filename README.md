@@ -43,6 +43,31 @@ A simple app for answering user queries with the Cohere API. This app provides a
 
 **Please fill in the steps above. Do not include implementation details or code snippets in this section.**
 
+ANSWER:
+
+### Explain UX decisions
+
+- The chat interface uses clear user/AI message distinction with different bubble colors and alignment, improving readability and context.
+- Typing indicators and streaming responses provide real-time feedback, making the AI feel responsive.
+- The send button is disabled during processing to prevent duplicate submissions.
+- Copy and retry buttons on messages enhance usability and error recovery.
+- The Wikipedia tool toggle is easily accessible, allowing users to control knowledge retrieval.
+- The layout is responsive and styled with Tailwind CSS for consistency and accessibility across devices.
+
+### Document error handling approach
+
+- Network and server errors are caught in `sendChat` and surfaced to the user as error messages in the chat, using a distinct style.
+- Streaming interruptions and missing responses are handled with fallback error messages and a retry mechanism.
+- The retry button allows users to resend failed messages, improving resilience.
+- Loading and typing states are managed to prevent user actions during processing, reducing the chance of errors.
+
+### List accessibility considerations
+
+- The chat area uses `role="log"` and `aria-live="polite"` to announce new messages to assistive technologies.
+- All interactive elements (send, copy, retry, Wikipedia toggle) have accessible labels and keyboard support.
+- Color contrast is ensured for readability, and focus styles are present on inputs and buttons.
+- The layout adapts to different screen sizes for better accessibility on all devices.
+
 ## Getting started
 
 ### Running the app

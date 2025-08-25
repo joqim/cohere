@@ -1,0 +1,25 @@
+# --- Python ---
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.sqlite3
+*.db
+
+# Environment files
+.env
+
+# --- Node / Frontend ---
+node_modules/
+dist/
+build/
+*.log
+
+# --- OS / IDE files ---
+.DS_Store
+Thumbs.db
+
+# VSCode
+.vscode/
+*.code-workspace
